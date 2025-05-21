@@ -104,11 +104,32 @@ Represents a line item in an order (i.e., a specific menu item and its quantity)
 - An **OrderDetail** ➝ connects one **Order** to one **MenuItem** with quantity and price.
 
   
-
 ### Scenario
+Your project flow should go through the following steps
+#### Step 1: Login / Sign-Up:
+The customer creates a new account or logs into an existing one to access the restaurant's features.
+* Accounts should contain a **Username** and a **Password**
+  * Having a more detailed account setup is bonus
+* Passwords should be hashed
 
-login, sign up, order
-adding a order item -> script
+#### Step 2: Display Menu:
+A menu is displayed to the customer consisting of all the foods available in the restaurant.
+* Menu Items should include " Food Name + Price "
+  * Including the used ingredients is bonus
+
+#### Step 3: Order Food:
+The customer selects desired items and adds them to the cart for checkout.
+* The customer should be able to add or delete selected foods from their order.
+
+#### Step 4: Checkout
+After the order is placed, a detailed receipt is shown with itemized costs and confirmation of the transaction.
+* The receipt has to have the following information:
+  1. Names of the ordered food items
+  2. Quantity of each item
+  3. Price per unit of each item
+  4. Total price for each item (unit price × quantity)
+  5. Total price of the order
+* After the confirmation, the order should be saved to the database
 
 ### UI
 pages
