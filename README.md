@@ -1,4 +1,4 @@
-# Eighth Assignment - Restaurant
+# Eighth Assignment: Restaurant 🍕
 
 ## Overview 👋
 
