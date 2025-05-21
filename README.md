@@ -36,7 +36,7 @@ Your project should **at minimum** include the following entities to properly mo
 
 ------
 
-### 1. **User**
+#### 1. **User**
 
 Represents a person using the system (e.g., a customer).
 
@@ -50,7 +50,7 @@ Represents a person using the system (e.g., a customer).
 
 ------
 
-### 2. **MenuItem**
+#### 2. **MenuItem**
 
 Represents a single item on the restaurant's menu.
 
@@ -63,9 +63,14 @@ Represents a single item on the restaurant's menu.
 - **Relationships:**
   - A **MenuItem** can appear in many **OrderDetails** (i.e., be ordered in many different orders).
 
+
+> **⚠️ There should be at least 3 items in the menu.**  
+        
+> **💡 You don't have to add a menu item through your app. Inserting items by sql commands in pg admin is enough.**
+
 ------
 
-### 3. **Order**
+#### 3. **Order**
 
 Represents a single order placed by a user.
 
@@ -80,7 +85,7 @@ Represents a single order placed by a user.
 
 ------
 
-### 4. **OrderDetail**
+#### 4. **OrderDetail**
 
 Represents a line item in an order (i.e., a specific menu item and its quantity).
 
