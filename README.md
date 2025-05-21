@@ -8,14 +8,14 @@ You’ll implement essential user flows like **sign-up**, **login**, and **placi
   
 ## Prerequisites ✅  
 
- Make sure you have installed these apps before starting your project:  
+ Make sure you have installed these programs and services before starting your project:  
   
-- Scene Builder  
-- PostgreSQL  
-- Java 23  
 - Git  
-- Gradle as the package manager   
-> 💡 You might need VPN or DNS setting for downloading JavaFX packages in Gradle.
+- Java 23  
+- Gradle   
+- PostgreSQL  
+- Scene Builder  
+> 💡 You might need VPN or DNS setting for downloading JavaFX packages using Gradle.
   
 ## Objectives ✏️
 
@@ -144,26 +144,22 @@ Category, Menu Item Flow, UI, Viewing order history, Picture
 
 Your submission will be evaluated based on the following criteria:
 
-- **Correctness and Compilation**
-  Submissions that do not compile will receive a significantly lower score.
-- **User Interface (JavaFX)**
-   The UI should be clean, user-friendly, and visually organized. Use JavaFX effectively to implement different screens (e.g., login/signup, ordering, order summary).
 - **Database Design and Integration (PostgreSQL)**
    You must design your database schema properly with clear relationships between entities (as explained in the Logic section). The application should interact with the PostgreSQL database to:
   - Store and retrieve user data
   - Save and update orders and their details
   - Load menu items dynamically
+- **User Interface (JavaFX)**
+   The UI should be clean, user-friendly, and visually organized. Use JavaFX effectively to implement different screens (e.g., login/signup, ordering, order summary).
 - **Code Quality and Structure**
    Your code should be clean, modular, and follow object-oriented principles. Use appropriate naming, structure your classes and packages well, and avoid redundant or duplicate code.
-- **Authentication**
-   The application should allow users to sign up and log in securely. You are expected to handle basic validation and error handling in the login/signup flow.
 
 ------
 
 > ⚠️ **Important:** Use of ChatGPT or any AI-based generative tools for completing any part of the assignment is **strictly prohibited**. Detection will result in an automatic **score of 0** with no warnings.
 
-**Note: Usage of ChatGPT or any other AI generative model to complete any part of this assignment is strictly prohibited. Violation will result in a score of 0 without warnings.**
 ## Submission
 
-The deadline for submitting your code is **Tuesday, June 4 (14th of Khordad)**. Good luck! 
+The deadline for submitting your code is **Tuesday, June 4 (14th of Khordad)**.  
+Good luck! 
 
