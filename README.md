@@ -134,11 +134,35 @@ After the order is placed, a detailed receipt is shown with itemized costs and c
 * After the confirmation, the order should be saved to the database
 
 ### UI
-pages
-
+The User Interface of your application should include the features listed below (note that this is just a suggested UI implementation and your app can have any design of your choice)
+#### 1. Login / Sign-Up page:
+* A text field and a password field for logging in
+* A text field and two password fields for signing up (two pass fields for verifying the password)
+* Note that errors for common problems such as the ones listed below should be displayed to the user:
+  * "Username unavailable" in login
+  * "Incorrect Password" in login
+  * "Username is already taken" in sign up
+  * etc.
+#### 2. Ordering page:
+* On the left side of the screen a list of the customer's currently selected food
+  * The customer must have the ability to increase or decrease the number of selected items
+  * Also include a "Checkout" button under the order so the customer can end their selection
+* On the right side, the menu of the restaurant
+  * The menu items should be buttons so the customer can select them
+  * It can be implemented as a simple table showing the food and its price or by using small components like bubbles that get added to the page
+* Implementing a "Back" button is bonus so that the user can return to the login page
+#### 3. Checkout page:
+* As explained in the last section, display each of the necessary information either in a table or any other way you see fit
+* Implement a "Set Order" button to finalize the order and add it to the database
+* Display something like "Thanks for your purchase :)" message to the customer
+* Give the options to order again or leave to the login/sign-up pages and implement the functionality for each button correspondingly
 ## Bonus
 
-Category, Menu Item Flow, UI, Viewing order history, Picture
+* Smooth and consistent navigation, allowing users to move forward and backward between pages without breaking the app’s functionality.
+* Include food categories (e.g., Fast Food, Traditional, Italian, etc.) to organize the menu and help users find items more easily.
+* The ability to view the order history of a customer.
+* Using images for displaying menu items.
+* Being able to add more menu items as a restaurant admin.
 
 ## Evaluation 📃
 
