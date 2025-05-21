@@ -191,6 +191,6 @@ Your submission will be evaluated based on the following criteria:
 
 ## Submission
 
-The deadline for submitting your code is **Tuesday, June 4 (14th of Khordad)**.  
+The deadline for submitting your code is **Wednesday, June 4th (Khordad 14th)**.  
 Good luck! 
 
