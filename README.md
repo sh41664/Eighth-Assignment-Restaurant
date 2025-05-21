@@ -1,29 +1,31 @@
 # Eighth Assignment - Restaurant
 
-## Introduction 👋
-Welcome to your last assignment before the Final project. 🤠🤠  I hope you all are still energetic and ready to continue your excellent work. In this project, you will build a Hangman game using JavaFX and store its data in a chosen database. 💻
+## Overview 👋
 
-## Prerequisites ✅
-1) Make sure you have installed these apps before starting your project:
+Welcome to your final assignment before the grand project! 🍽️🚀 We’re wrapping things up with a full-stack desktop application that simulates a restaurant ordering system. You’ll build it using **JavaFX** for the UI and **PostgreSQL** for persistent data storage.
 
-- SceneBuilder
-- Mongodb/PostgreSQL
-- Java 21
-- Git
-- Maven as a package manager
+You’ll implement essential user flows like **sign-up**, **login**, and **placing orders**, and use **JDBC** for direct interaction with the database. Your journey will bring together everything you've learned in this course — from file-based applications to database-backed systems with a graphical interface.
+  
+## Prerequisites ✅  
 
+ Make sure you have installed these apps before starting your project:  
+  
+- Scene Builder  
+- PostgreSQL  
+- Java 23  
+- Git  
+- Gradle as the package manager   
+> 💡 You might need VPN or DNS setting for downloading JavaFX packages in Gradle.
+  
 ## Objectives ✏️
 
 By completing this assignment, you will:
 
-- Learn about databases and how to work with them.
-- Gain experience with JavaFX and UI development.
-
-
-## Assignment Overview 🔎
-
-Your task is to develop a Hangman game. Hangman is a game where the player must guess the word by suggesting letters within a limited number of guesses. Incorrect guesses result in a part of a stick figure being drawn, and the game is lost if the figure is completed before the word is guessed. Note that you must design a Graphical User Interface for this project using JavaFX.
-
+- Build a **full-stack desktop application** that integrates a graphical user interface with a relational database.
+    
+- Understand how to **connect a Java application to a relational database** using JDBC.
+    
+- Gain hands-on experience in **designing and implementing UI using JavaFX**.
 
 ## Logic
 
