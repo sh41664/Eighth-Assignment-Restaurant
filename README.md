@@ -15,7 +15,8 @@ You’ll implement essential user flows like **sign-up**, **login**, and **placi
 - Gradle   
 - PostgreSQL  
 - Scene Builder  
-> 💡 You might need VPN or DNS setting for downloading JavaFX packages using Gradle.
+> 💡 You might need VPN or DNS setting for downloading JavaFX packages using Gradle.  
+> In case of any major problems with gradle, you can create a new project with maven and copy the readme file in the new project.
   
 ## Objectives ✏️
 
@@ -173,6 +174,7 @@ Your submission will be evaluated based on the following criteria:
   - Store and retrieve user data
   - Save and update orders and their details
   - Load menu items dynamically
+  - Include your initial sql codes as a separate file in the project
 - **User Interface (JavaFX)**
    The UI should be clean, user-friendly, and visually organized. Use JavaFX effectively to implement different screens (e.g., login/signup, ordering, order summary).
 - **Code Quality and Structure**
