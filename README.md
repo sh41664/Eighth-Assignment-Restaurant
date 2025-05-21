@@ -29,7 +29,7 @@ Your task is to develop a Hangman game. Hangman is a game where the player must 
 
 ### Entities
 
-This project models a simple **restaurant ordering system**. Your project should **at minimum** include the following entities to properly model a simple restaurant ordering system. The following entities are essential for managing users, menu items, and orders:
+Your project should **at minimum** include the following entities to properly model a simple restaurant ordering system. The following entities are essential for managing users, menu items, and orders:
 
 ------
 
@@ -103,7 +103,7 @@ Represents a line item in an order (i.e., a specific menu item and its quantity)
 
 - An **OrderDetail** ➝ connects one **Order** to one **MenuItem** with quantity and price.
 
-  ###  ###
+  
 
 ### Scenario
 
@@ -117,27 +117,27 @@ pages
 
 Category, Menu Item Flow, UI, Viewing order history, Picture
 
-- ## Evaluation 📃
+## Evaluation 📃
 
-  Your submission will be evaluated based on the following criteria:
+Your submission will be evaluated based on the following criteria:
 
-  - **Correctness and Compilation**
-    Submissions that do not compile will receive a significantly lower score.
-  - **User Interface (JavaFX)**
-     The UI should be clean, user-friendly, and visually organized. Use JavaFX effectively to implement different screens (e.g., login/signup, ordering, order summary).
-  - **Database Design and Integration (PostgreSQL)**
-     You must design your database schema properly with clear relationships between entities (as explained in the Logic section). The application should interact with the PostgreSQL database to:
-    - Store and retrieve user data
-    - Save and update orders and their details
-    - Load menu items dynamically
-  - **Code Quality and Structure**
-     Your code should be clean, modular, and follow object-oriented principles. Use appropriate naming, structure your classes and packages well, and avoid redundant or duplicate code.
-  - **Authentication**
-     The application should allow users to sign up and log in securely. You are expected to handle basic validation and error handling in the login/signup flow.
+- **Correctness and Compilation**
+  Submissions that do not compile will receive a significantly lower score.
+- **User Interface (JavaFX)**
+   The UI should be clean, user-friendly, and visually organized. Use JavaFX effectively to implement different screens (e.g., login/signup, ordering, order summary).
+- **Database Design and Integration (PostgreSQL)**
+   You must design your database schema properly with clear relationships between entities (as explained in the Logic section). The application should interact with the PostgreSQL database to:
+  - Store and retrieve user data
+  - Save and update orders and their details
+  - Load menu items dynamically
+- **Code Quality and Structure**
+   Your code should be clean, modular, and follow object-oriented principles. Use appropriate naming, structure your classes and packages well, and avoid redundant or duplicate code.
+- **Authentication**
+   The application should allow users to sign up and log in securely. You are expected to handle basic validation and error handling in the login/signup flow.
 
-  ------
+------
 
-  > ⚠️ **Important:** Use of ChatGPT or any AI-based generative tools for completing any part of the assignment is **strictly prohibited**. Detection will result in an automatic **score of 0** with no warnings.
+> ⚠️ **Important:** Use of ChatGPT or any AI-based generative tools for completing any part of the assignment is **strictly prohibited**. Detection will result in an automatic **score of 0** with no warnings.
 
 **Note: Usage of ChatGPT or any other AI generative model to complete any part of this assignment is strictly prohibited. Violation will result in a score of 0 without warnings.**
 ## Submission
