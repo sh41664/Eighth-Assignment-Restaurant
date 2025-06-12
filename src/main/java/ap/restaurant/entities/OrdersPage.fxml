@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.restaurant.restaurant.OrdersPageController">
+    <children>
+        <ListView fx:id="ordersList" layoutX="3.0" layoutY="96.0" prefHeight="297.0" prefWidth="593.0" />
+        <Button layoutX="497.0" layoutY="44.0" mnemonicParsing="false" onAction="#newOrder" text="+ new Order" />
+        <Label fx:id="welcomeLabel" layoutX="53.0" layoutY="48.0" text="Label" />
+        <Button layoutX="248.0" layoutY="44.0" mnemonicParsing="false" onAction="#viewOrder" text="view order" />
+    </children>
+</AnchorPane>

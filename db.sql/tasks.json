@@ -1,0 +1,211 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 17.5
+-- Dumped by pg_dump version 17.5
+
+-- Started on 2025-05-31 00:28:13
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 218 (class 1259 OID 16436)
+-- Name: menu_item; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.menu_item (
+    id integer NOT NULL,
+    name text,
+    price double precision,
+    description text
+);
+
+
+ALTER TABLE public.menu_item OWNER TO postgres;
+
+--
+-- TOC entry 220 (class 1259 OID 16453)
+-- Name: order_details; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.order_details (
+    id integer NOT NULL,
+    order_id integer,
+    menu_item_id integer,
+    quantity integer,
+    price double precision,
+    total_price double precision
+);
+
+
+ALTER TABLE public.order_details OWNER TO postgres;
+
+--
+-- TOC entry 219 (class 1259 OID 16443)
+-- Name: orders; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.orders (
+    id integer NOT NULL,
+    user_id integer,
+    created_at date,
+    total_price double precision
+);
+
+
+ALTER TABLE public.orders OWNER TO postgres;
+
+--
+-- TOC entry 217 (class 1259 OID 16429)
+-- Name: users; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.users (
+    id integer NOT NULL,
+    username text,
+    password text,
+    email text,
+    salt bytea
+);
+
+
+ALTER TABLE public.users OWNER TO postgres;
+
+--
+-- TOC entry 4910 (class 0 OID 16436)
+-- Dependencies: 218
+-- Data for Name: menu_item; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.menu_item (id, name, price, description) FROM stdin;
+1	KrabbyBurger	25	two breads, tomato, lettuce, pickles, love :)
+2	soda	5	sugar + CO2
+3	french fries	17.25	potato + too much oil
+\.
+
+
+--
+-- TOC entry 4912 (class 0 OID 16453)
+-- Dependencies: 220
+-- Data for Name: order_details; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.order_details (id, order_id, menu_item_id, quantity, price, total_price) FROM stdin;
+1	1	1	2	25	50
+2	2	2	1	5	5
+3	2	3	1	17.25	17.25
+4	2	1	2	25	50
+5	3	3	2	17.25	34.5
+6	3	2	1	5	5
+\.
+
+
+--
+-- TOC entry 4911 (class 0 OID 16443)
+-- Dependencies: 219
+-- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.orders (id, user_id, created_at, total_price) FROM stdin;
+1	1	2025-05-30	50
+2	1	2025-05-31	72
+3	1	2025-05-31	39
+\.
+
+
+--
+-- TOC entry 4909 (class 0 OID 16429)
+-- Dependencies: 217
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.users (id, username, password, email, salt) FROM stdin;
+1	danial	eVR6s4s4QXOhDryVahsxvw==	dan@gamil	\\x2ec9a72361f58cd96c428f62fd08a7f3
+2	danialMehrabi	bxRfTnsy47Uq0VY1z5dKzg==	dani@gmail	\\xf9338ab84fc20456b961c6bb50fef88d
+3	javad	aTwQ9WjGsAXbozQMxU//rQ==	javad	\\x3bd6b1101c35ee0d6f4ad0b5d6e9c94d
+\.
+
+
+--
+-- TOC entry 4756 (class 2606 OID 16442)
+-- Name: menu_item menu_item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.menu_item
+    ADD CONSTRAINT menu_item_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4760 (class 2606 OID 16457)
+-- Name: order_details order_detail_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.order_details
+    ADD CONSTRAINT order_detail_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4758 (class 2606 OID 16447)
+-- Name: orders order_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT order_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4754 (class 2606 OID 16435)
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4762 (class 2606 OID 16463)
+-- Name: order_details menu_item_id.fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.order_details
+    ADD CONSTRAINT "menu_item_id.fk" FOREIGN KEY (menu_item_id) REFERENCES public.menu_item(id) NOT VALID;
+
+
+--
+-- TOC entry 4763 (class 2606 OID 16458)
+-- Name: order_details order_id.fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.order_details
+    ADD CONSTRAINT "order_id.fk" FOREIGN KEY (order_id) REFERENCES public.orders(id);
+
+
+--
+-- TOC entry 4761 (class 2606 OID 16448)
+-- Name: orders user_id.fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT "user_id.fk" FOREIGN KEY (user_id) REFERENCES public.users(id) NOT VALID;
+
+
+-- Completed on 2025-05-31 00:28:13
+
+--
+-- PostgreSQL database dump complete
+--
